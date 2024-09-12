@@ -1,0 +1,530 @@
+/* 1. Setup/Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/**********/
+/* Header */
+/**********/
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-image: url(images/header.svg);
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better readability */
+}
+header p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better readability */
+    font-size: x-large;
+}
+header button{
+    background-color: #EA4726;
+    padding: 12px 30px 12px 30px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    transition: .5s;
+}
+header button:hover{
+    cursor: pointer;
+    transform: translateY(-2px); /* Lift the card when hovered */
+}
+/**********/
+
+
+/**********/
+/* Navbar */
+/**********/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply the blur effect */
+    position: fixed; /* Make it stick to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo, .logo a{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.4s ease-in-out; /* Transition effect */
+}
+
+
+.nav-links.active {
+    transform: translateX(0); /* Moves the nav links into view when active */
+}
+
+.nav-links li {
+    margin: 0 15px;
+    align-content: center;
+    transition: .5s;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);  
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better readability */
+
+    transition: color 0.3s; /* Smooth link color transition */
+
+}
+
+.nav-links li a:hover{
+    color: #EA4726;
+}
+
+.nav-links li:last-child a:hover {
+    color: white; /* The color you want to change to on hover */
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.4); /* Darker background on scroll */
+    transition: 2s;
+}
+
+.reach{
+    background-color: #007CA3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .5s;
+}
+.reach:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for lines */
+
+}
+
+/* Rotate burger lines for animation */
+.burger.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active .line2 {
+    opacity: 0; /* Hide the middle line */
+}
+
+.burger.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+/**********/
+
+
+
+
+/********/
+/* Main */
+/********/
+main section{
+    height: 100%;
+    background-color: white;
+}
+
+main section h1{
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+/********/
+
+
+/************/
+/* Services */
+/************/
+main .services_article{
+    width: 30%;
+    height: 225px;
+    margin: 1rem 2rem;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add smooth transition */
+}
+
+main .services_article:hover {
+    transform: translateY(-10px); /* Lift the card when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+main .articles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .articles:last-child{
+    padding-bottom: 4%;
+}
+main .articles img{
+    display: block;
+    margin: 0px auto 10px;
+}
+
+main .articles p, main .articles h2{
+    margin: 4% auto;
+    text-align: center;
+}
+main .articles h2{
+    font-weight: bold;
+}
+/************/
+
+
+
+/*********/
+/* About */
+/*********/
+.about{
+    height: 80vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+}
+
+.about_article{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+.about_article p,.about_article h1{
+    text-align: left;
+}
+
+.about_article h1{
+    margin-bottom: 5%;
+}
+
+.about_div{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    background-image: url(images/Group.png);
+}
+.about_div img{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.about_div img:first-child{
+    bottom: 50px;
+    right: 110px;
+    z-index: 1;
+}
+.about_div img:last-child{
+    top: 70px;
+    left: 110px;
+    z-index: 0;
+}
+/*********/
+
+
+
+
+
+/**********/
+/* Slider */
+/**********/
+/* Section and header styling */
+.slider-section {
+    text-align: center;
+    background-color: white;
+    height: 100%;   
+}
+
+
+
+/* Slider container */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden; /* Hide overflow to prevent images from spilling outside */
+    
+}
+
+/* Image styling */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 800px;
+    height: 400px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.5);
+    margin: 20px;
+
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+/* Navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 50%;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: 1s;
+}
+
+.prev {
+    left: 100px;
+}
+
+.next {
+    right: 100px;
+}
+
+/* Optional: hover effects for buttons */
+.prev:hover, .next:hover {
+    background-color: orangered;
+    color: #000;
+}
+
+
+
+/* Counter Styling */
+.slide-counter {
+    /* position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%); */
+    display: block;
+    margin: 0px auto 1rem;
+    width: 100px;
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* Optional: hover effects for buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/**********/
+
+
+
+/**********/
+/* Footer */
+/**********/
+footer{
+    background-color:  #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 5% 5% 1% 5%;
+
+}
+.footer_div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.footer_div section{
+    width: 25%;
+    text-align: center;
+}
+
+
+.footer_first{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.footer_first p{
+    text-align: left;
+    margin: 5% auto;
+}
+.footer_first h1{
+    text-align: left;
+    margin: 10px 0 0 0;
+}
+
+.footer_second, .footer_third{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer_first p, .footer_second p, .footer_third p{
+    color: #808080;
+}
+.footer_second p, .footer_third p{
+    margin: 5px auto;
+}
+.footer_second img, .footer_third img{
+    width: 4rem;
+}
+
+
+.flex{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+.small-container{
+    margin: 5%;
+}
+
+/**************/
+/* Responsive */
+/**************/
+@media (max-width: 768px) {
+    /* .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;  
+    } */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+    }
+    .nav-links.active {
+        transform: translateX(0); /* Slide in from the right */
+    }
+    .nav-links li{
+        margin-bottom: 5%;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .burger {
+        display: flex;
+    }
+    main .services_article, main .about_article{
+        width: 80% !important;
+        margin: auto;
+    }
+    main .articles{
+        display: flex;
+        flex-direction: column;
+    }
+    .about_div{
+        display: none;
+    }
+}
+

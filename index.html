@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKF | Bygg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="home">
+        <nav class="navbar">
+            <div class="logo"><a href="#">AKF</a></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#image-slider">Our work</a></li>
+                <li class="reach"><a href="#contact">Reach us</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="header-h1">WE HELP YOU WITH<br>EVERYTHING IN BUILDING</h1>
+            <p>Creating save and lovely buildings for the current and future generations in the MENS region!</p>
+            <button>Get To Know Us More</button>
+        </div>
+    </header>
+    <main>
+        <section id="services" class="services">
+            <h1>WHAT WE SPECIALIZE IN?</h1>
+                <div class="articles">
+                    <article class="services_article">
+                        <img src="images/construction.svg" alt="">
+                        <h2>Construction</h2>
+                        <p>Creating save and lovely buildings for the current and future generations in the MENS region!</p>
+                    </article>
+                    <article class="services_article">
+                        <img src="images/reroofing.svg" alt="">
+                        <h2>Reroofing</h2>
+                        <p>Creating save and lovely buildings for the current and future generations in the MENS region!</p>
+                    </article>
+                </div>
+                <div class="articles">
+                    <article class="services_article">
+                        <img src="images/kitchens.svg" alt="">
+                        <h2>Kitchens</h2>
+                        <p>Creating save and lovely buildings for the current and future generations in the MENS region!</p>
+                    </article>
+                    <article class="services_article">
+                        <img src="images/bathrooms.svg" alt="">
+                        <h2>Bathrooms</h2>
+                        <p>Creating save and lovely buildings for the current and future generations in the MENS region!</p>
+                    </article>
+                </div>
+        </section>
+        <section id="about" class="about">
+                <article class="about_article">
+                    <h1>
+                        About Us
+                    </h1>
+                    <p>
+                        Creating save and lovely buildings for the current and future generations in the MENS region! Creating save and lovely buildings for the current and future generations in the MENS region!
+                    </p><br>
+                    <p>
+                        Creating save and lovely buildings for the current and future generations in the MENS region!
+                    </p><br>
+                    <p>
+                        Creating save and lovely buildings for the current and future generations in the MENS region!
+                    </p><br>
+                    <p>
+                        Creating save and lovely buildings for the current and future generations in the MENS region!
+                    </p><br>
+                </article>
+                <div class="about_div">
+                    <img src="images/about2.svg" alt="">
+                    <img src="images/about1.svg" alt="">
+                </div>
+        </section>
+        <section class="slider-section" id="image-slider">
+            <h1>Our Work</h1>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/header.svg" class="slide" alt="Image 1">
+                    <img src="images/cons1.jpeg" class="slide" alt="Image 2">
+                    <img src="images/about2.svg" class="slide" alt="Image 3">
+                    <img src="images/about_bg.svg" class="slide" alt="Image 4">
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+                <!-- Counter for current slide and total slides -->
+
+            </div>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h1>Contact Us</h1>
+        <div class="footer_div">
+            <section class="footer_first">
+                <h1>AKF</h1>
+                <p>Creating save and lovely buildings for the current and future generations.</p>
+                <div>
+                    <a href="http://facebook.com" target="_blank"><img src="images/instagram.svg" alt=""></a>
+                    <a href="http://" target="_blank"><img src="images/facebook.svg" alt=""></a>
+                    <a href="http://" target="_blank"><img src="images/tiktok.svg" alt=""></a>
+                    <a href="http://" target="_blank"><img src="images/whatsapp.svg" alt=""></a>
+                </div>
+            </section>
+            <section class="footer_second">
+                <div class="flex">
+                    <img src="images/email.svg" alt="">
+                    <div class="small-container">
+                        <h4>Email:</h4>
+                        <p>ahmad.ai@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <img src="images/location.svg" alt="">
+                    <div class="small-container">
+                        <h4>Location:</h4>
+                        <p>Saida</p>
+                    </div>
+                </div>
+
+            </section>
+            <section class="footer_third">
+                <div class="flex">
+                    <img src="images/call.svg" alt="">
+                    <div class="small-container">
+                        <h4>Whatsapp:</h4>
+                        <p><a href="https://wa.me/+96176468212" target="_blank">+96176468212</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
