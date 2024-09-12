@@ -456,7 +456,7 @@ footer h1{
     align-items: center;
     flex-direction: column;
 }
-.footer_first p, .footer_second p, .footer_third p{
+.footer_first p, .footer_second p, .footer_third p, footer a{
     color: #808080;
 }
 .footer_second p, .footer_third p{
@@ -465,8 +465,9 @@ footer h1{
 .footer_second img, .footer_third img{
     width: 4rem;
 }
-
-
+footer a:hover{
+    color: #007CA3;
+}
 .flex{
     display: flex;
     justify-content: start;
