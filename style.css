@@ -369,7 +369,6 @@ main .articles h2{
 
 /* Optional: hover effects for buttons */
 .prev:hover, .next:hover {
-    background-color: orangered;
     color: #000;
 }
 
@@ -518,7 +517,7 @@ footer a:hover{
     }
     main .services_article, main .about_article{
         width: 80% !important;
-        margin: auto;
+        margin-bottom: 15%;
     }
     main .articles{
         display: flex;
@@ -538,5 +537,17 @@ footer a:hover{
         width: 90%;
     }
 
+    .slider{
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
 }
 
