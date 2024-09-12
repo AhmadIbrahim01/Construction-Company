@@ -527,5 +527,16 @@ footer a:hover{
     .about_div{
         display: none;
     }
+
+    .footer_div{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer_div section{
+        width: 90%;
+    }
+
 }
 
