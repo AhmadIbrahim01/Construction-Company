@@ -51,10 +51,11 @@ header button{
     padding: 12px 30px 12px 30px;
     border-radius: 6px;
     border: none;
-    color: white;
     margin-top: 20px;
     transition: .5s;
+    color: white;
 }
+
 header button:hover{
     cursor: pointer;
     transform: translateY(-2px); /* Lift the card when hovered */
