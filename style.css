@@ -11,11 +11,36 @@ html {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--body-color);
 }
 
 a{
     text-decoration: none;
 }
+
+h1,p,h2,h4{
+    color: var(--h1-color);
+}
+/*====================================== VARIABLES CSS ======================================*/
+:root{
+    --first-color: white;
+    --second-color: #f4f4f4;
+    --h1-color: black;
+    --text-color: #808080;
+    --first-button-color: #EA4726;
+    --second-button-color: #007CA3;
+    --body-color: white;
+}
+
+body.dark-mode {
+    --first-color: #1e1e1e;
+    --second-color: #252323;
+    --h1-color: white;
+    --text-color: #808080;
+    --first-button-color: #EA4726;
+    --second-button-color: #C3F500;
+    --body-color: #1e1e1e;
+  }
 
 /**********/
 /* Header */
@@ -26,7 +51,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: var(--second-color);
     text-align: center;
     background-image: url(images/header.svg);
     background-size: cover; /* Ensures the image covers the entire header */
@@ -47,7 +72,7 @@ header p {
     font-size: x-large;
 }
 header button{
-    background-color: #EA4726;
+    background-color: var(--first-button-color);
     padding: 12px 30px 12px 30px;
     border-radius: 6px;
     border: none;
@@ -86,7 +111,7 @@ header button:hover{
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-    color: #fff;
+    color: white;
 }
 
 .nav-links {
@@ -123,11 +148,11 @@ header button:hover{
 }
 
 .nav-links li a:hover{
-    color: #EA4726;
+    color: var(--first-button-color);
 }
 
 .nav-links li:last-child a:hover {
-    color: white; /* The color you want to change to on hover */
+    color: var(--first-color); /* The color you want to change to on hover */
 }
 
 .navbar.scrolled {
@@ -136,7 +161,7 @@ header button:hover{
 }
 
 .reach{
-    background-color: #007CA3;
+    background-color: var(--second-button-color);
     padding: 5px 10px;
     border-radius: 5px;
     transition: .5s;
@@ -174,6 +199,18 @@ header button:hover{
 .burger.active .line3 {
     transform: rotate(-45deg) translate(5px, -5px);
 }
+
+header .mode{
+    margin: 0px 2% auto auto;
+    padding: 0px;
+    background-color: #00000000;
+
+}
+header .display-sun,header .display-moon{
+    display: none;
+}
+
+
 /**********/
 
 
@@ -184,7 +221,7 @@ header button:hover{
 /********/
 main section{
     height: 100%;
-    background-color: white;
+    background-color: var(--first-color);
 }
 
 main section h1{
@@ -245,7 +282,7 @@ main .articles h2{
 /*********/
 .about{
     height: 80vh;
-    background-color: #f4f4f4;
+    background-color: var(--second-color);
     display: flex;
     justify-content:end;
     align-items: center;
@@ -303,7 +340,7 @@ main .articles h2{
 /* Section and header styling */
 .slider-section {
     text-align: center;
-    background-color: white;
+    background-color: var(--first-color);
     height: 100%;   
 }
 
@@ -411,7 +448,7 @@ main .articles h2{
 /* Footer */
 /**********/
 footer{
-    background-color:  #f4f4f4;
+    background-color: var(--second-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -457,7 +494,7 @@ footer h1{
     flex-direction: column;
 }
 .footer_first p, .footer_second p, .footer_third p, footer a{
-    color: #808080;
+    color: var(--text-color);
 }
 .footer_second p, .footer_third p{
     margin: 5px auto;
@@ -466,7 +503,7 @@ footer h1{
     width: 4rem;
 }
 footer a:hover{
-    color: #007CA3;
+    color: var(--second-button-color);
 }
 .flex{
     display: flex;
@@ -559,14 +596,4 @@ footer a:hover{
     }
 }
 
-
-header .mode{
-    margin: 0px 2% auto auto;
-    padding: 0px;
-    background-color: #00000000;
-
-}
-header .display-sun,header .display-moon{
-    display: none;
-}
 
