@@ -550,5 +550,9 @@ footer a:hover{
     .next {
         right: 10px;
     }
+
+    .services h1, .about_article h1, .slider-section h1, footer h1{
+        font-size: 3rem;
+    }
 }
 

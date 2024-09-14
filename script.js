@@ -1,6 +1,7 @@
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 
+
 burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     burger.classList.toggle('active');
@@ -66,6 +67,8 @@ document.querySelectorAll('.scroll-link').forEach(link => {
       event.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetSection = document.getElementById(targetId);
+      navLinks.classList.toggle('active');
+      burger.classList.toggle('active');
   
       window.scrollTo({
         top: targetSection.offsetTop,
@@ -73,4 +76,17 @@ document.querySelectorAll('.scroll-link').forEach(link => {
       });
     });
   });
+
+// Scroll different sections without changing the link for button
+const button = document.getElementById('button')
+button.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    window.scrollTo({
+    top: targetSection.offsetTop,
+    behavior: 'smooth'
+    });
+});
   
