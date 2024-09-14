@@ -102,12 +102,11 @@ dark_button.addEventListener('click', function(){
     light.classList.toggle('display-sun');
     dark.classList.toggle('display-moon');
     document.body.classList.toggle('dark-mode');
-
 });
 light_button.addEventListener('click', function(){
     light.classList.toggle('display-sun');
     dark.classList.toggle('display-moon');
-
+    document.body.classList.toggle('dark-mode');
 });
 
 
@@ -118,6 +117,17 @@ const toggleButton = document.getElementById('toggleButton');
 const themeImages = document.querySelectorAll('.theme-image');
 
 dark_button.addEventListener('click', () => {
+  
+  themeImages.forEach(image => {
+    // Toggle between the light and dark image
+    if (document.body.classList.contains('dark-mode')) {
+      image.src = image.getAttribute('data-dark');  // Set dark mode image
+    } else {
+      image.src = image.getAttribute('data-light');  // Set light mode image
+    }
+  });
+});
+light_button.addEventListener('click', () => {
   
   themeImages.forEach(image => {
     // Toggle between the light and dark image
