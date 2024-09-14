@@ -554,5 +554,19 @@ footer a:hover{
     .services h1, .about_article h1, .slider-section h1, footer h1{
         font-size: 3rem;
     }
+    header .mode svg    {
+        margin-top: 2rem;
+    }
+}
+
+
+header .mode{
+    margin: 0px 2% auto auto;
+    padding: 0px;
+    background-color: #00000000;
+
+}
+header .display-sun,header .display-moon{
+    display: none;
 }
 

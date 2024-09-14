@@ -90,3 +90,20 @@ button.addEventListener('click', function(event) {
     });
 });
   
+
+// Dark Mode & Light Mode
+
+const dark_button = document.getElementById('dark-mode')
+const light_button = document.getElementById('light-mode')
+const dark = document.getElementById('li_dark')
+const light = document.getElementById('li_light')
+
+dark_button.addEventListener('click', function(){
+    light.classList.toggle('display-sun');
+    dark.classList.toggle('display-moon');
+});
+light_button.addEventListener('click', function(){
+    light.classList.toggle('display-sun');
+    dark.classList.toggle('display-moon');
+
+});
