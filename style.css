@@ -499,6 +499,11 @@ footer h1{
 .footer_second p, .footer_third p{
     margin: 5px auto;
 }
+
+.footer_first img{
+    margin: 5px;
+}
+
 .footer_second img, .footer_third img{
     width: 4rem;
 }
