@@ -594,7 +594,10 @@ footer a:hover{
     }
 
     .services h1, .about_article h1, .slider-section h1, footer h1{
-        font-size: 3rem;
+        font-size: 35px;
+    }
+    p{
+        font-size: 14px;
     }
     header .mode svg    {
         margin-top: 2rem;
