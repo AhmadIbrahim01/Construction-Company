@@ -605,3 +605,8 @@ footer a:hover{
 }
 
 
+@media (max-width: 320px) {
+    .services h1, .about_article h1, .slider-section h1, footer h1{
+        font-size: 25px;
+    }
+}
