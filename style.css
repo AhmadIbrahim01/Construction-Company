@@ -371,7 +371,7 @@ main .articles h2{
 .slide {
     min-width: 100%;
     transition: opacity 0.5s ease;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 5px;
 
 }
